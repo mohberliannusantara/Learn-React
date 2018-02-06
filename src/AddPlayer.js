@@ -13,14 +13,37 @@ class AddPlayer extends React.Component {
 		this.setState({
 			name: event.target.value
 		})
-		console.log(this.state.name);
+	}
+
+	addPlayer = (event) => {
+		this.props.onAdd(this.state.name)
+		this.setState({
+			name: ""
+		})
 	}
 
 	render() {
+		const style = {
+			container:{
+				padding: 10
+			},
+			input: {
+				flex: 1,
+				paddingRight: 20,
+				width: "45%",
+				height: 27
+			},
+			button: {
+				float: "right",
+				marginRight: 80,
+				width: 120,
+				padding: 10
+			}
+		}
 		return (
-			<div>
-				<input onChange={this.onPlayerChange} type="text" placeholder="Input Text" value={this.state.name}/>	
-				<button>Add</button>
+			<div style={style.container}>
+				<input style={style.input} onChange={this.onPlayerChange} type="text" placeholder="Input Text" value={this.state.name}/>
+				<button style={style.button} onClick={this.addPlayer}>Add</button>
 			</div>
 		)
 	}
