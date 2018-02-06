@@ -26,7 +26,7 @@ class Leaderboard extends React.Component {
 		<div style={style.container}>
 			<h1>Leaderboard</h1>
 			<Players members={this.state.members}/>		
-			<AddPlayer />
+			<AddPlayer onAdd={this.onPLayerAdd}/>
 		</div>
 		)
   }
