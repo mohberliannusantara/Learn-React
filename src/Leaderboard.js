@@ -9,7 +9,8 @@ class Leaderboard extends React.Component {
 		const PLAYERS = [
 			{id: 1, name: "Belian", score: 25},
 			{id: 2, name: "Aka", score: 15},
-			{id: 3, name: "Wowo", score: 10}
+			{id: 3, name: "Wowo", score: 10},
+			{id: 4, name: "Datuk", score: 50}
 		]
 		
 		this.state = {
